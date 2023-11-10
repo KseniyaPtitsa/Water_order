@@ -1,4 +1,4 @@
-package com.example.water_order.models;
+package com.example.water_order.customers;
 
 import javax.persistence.*;
 

@@ -1,4 +1,4 @@
-package com.example.water_order.services;
+package com.example.water_order.orders.storage;
 
 import com.example.water_order.employees.model.Employee;
 import com.example.water_order.orders.model.Order;

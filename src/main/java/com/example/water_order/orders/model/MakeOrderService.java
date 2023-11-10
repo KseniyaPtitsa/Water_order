@@ -1,8 +1,7 @@
-package com.example.water_order.services;
+package com.example.water_order.orders.model;
 
 import com.example.water_order.employees.model.Employee;
-import com.example.water_order.orders.model.Order;
-import com.example.water_order.orders.model.OrderState;
+import com.example.water_order.orders.storage.OrderService;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
@@ -31,6 +30,6 @@ public class MakeOrderService implements OrderService {
     }
 
     void init() {
-        orders.add(new Order());
+        orders.add(new Order(364L, "вода 5 литров", Employee.builder().build(), OrderState.CONFIRMED));
     }
 }
