@@ -1,9 +1,9 @@
-package com.example.water_order.customers;
+package com.example.water_order.customers.model;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "customer")
+@Table(name = "customers")
 public class Customer {
 
     @Id

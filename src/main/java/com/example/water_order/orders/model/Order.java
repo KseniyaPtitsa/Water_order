@@ -1,9 +1,11 @@
 package com.example.water_order.orders.model;
 
+import com.example.water_order.customers.model.Customer;
 import com.example.water_order.employees.model.Employee;
 import lombok.*;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "orders")
@@ -21,6 +23,19 @@ public class Order {
 
     @Column(name = "product_name")
     private String productName;
+
+    @Column(name = "created_on")
+    private LocalDateTime createdOn;
+
+    @Column(name = "address")
+    private String address;
+
+    @Column(name = "comment")
+    private String comment;
+
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
 
     @ManyToOne
     @JoinColumn(name = "employee_id")

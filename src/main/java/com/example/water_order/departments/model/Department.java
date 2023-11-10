@@ -21,8 +21,4 @@ public class Department {
 
     @Column(name = "department_name")
     private String departmentName;
-
-    @ManyToOne
-    @JoinColumn(name = "employee_id")
-    private Employee leader;
 }
